@@ -1,0 +1,14 @@
+﻿.searchitemstemplate {
+
+}
+
+.searchbutton {
+    color: blue;
+    background-color: blue;
+    width: 75px;
+    height: 30px;
+}
+
+.searchbar {
+    width: 600px !important;
+}

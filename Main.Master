@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="FastHostsHeaderDemoV1.Main" %>
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head runat="server">
+        <title>FastHosts</title>
+        <link href="Styles/Main.css" rel="stylesheet" />
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="Scripts/jquery-2.1.1.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="Scripts/Main.js" defer></script>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+        <link rel="icon" href="Images/favicon.ico">
+    </head>
+
+    <body>
+
+        <ul id="slide-out" class="sidenav sidenavcolorIgs">
+            <li><a class="white-text" href="Default.aspx">Home</a></li>
+            <li><a class="white-text" href="Domains.aspx">TLD</a></li>
+            <li><a class="white-text" href="Register.aspx">Register</a>
+                <li><a class="white-text" href="Login.aspx">Login</a></li>
+                <li><a class="white-text" href="Contact.aspx">Contact</a></li>
+                <li>
+                    <h5>
+                      <div class="switch">
+                          <label>
+                              Light<input id="switchDarkTheme" type="checkbox">
+                              <span class="lever"></span>Dark
+                          </label>
+                      </div></h5></li>
+        </ul>
+        <!--Header for the navigation - Home | Domains | Register | Login | Contact -->
+        <header>
+            <nav class="navColor">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <a href="#" class="brand-logo"><img src="Images/logo.png" /></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="Domains.aspx">TLD</a></li>
+                        <li><a href="Register.aspx">Register</a></li>
+                        <li><a href="Login.aspx">Login</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
+                        <li>
+                            <h5>
+                      <div class="switch">
+                          <label>
+                              Light<input id="switchDarkTheme" type="checkbox">
+                              <span class="lever"></span>Dark
+                          </label>
+                      </div></h5></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </main>
+        <footer class="navColor page-footer" id="footColor">
+            <div class="container">
+                <div class="row">
+                    <div class="col 16 s12">
+                        <div class="wrapper">
+                            <div><img src="Images/logo.png" alt="" class="logo-footer" /></div>
+                            <div></div><img src="Images/fasthosts-20-years-logo-white.png" alt="#" class="left" width="140px" height="140px" /></div>
+                    </div>
+                </div>
+                <div class="col l4 offset-12 s12">
+                    <p>
+                        © 1999-2019 FastHosts Internet Limited. All rights reserved.
+                    </p>
+                    <div>
+                        <p>
+                            FastHosts is the trading name of FastHosts Internet Limited. Company registration No. 3656438. Registered in England and Wales. VAT No. 720821857. Registered office: Discovery House, 154 SouthGate Street, Gloucester, GL1 2EX, United Kingdom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+    </html>
